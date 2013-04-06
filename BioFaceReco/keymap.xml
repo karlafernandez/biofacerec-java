@@ -5,4 +5,9 @@
 		<value index="1">male</value>
 		<value index="2">female</value>
 	</attribute>
+	<attribute value="mood">
+		<value index="1">normal</value>
+		<value index="2">happy</value>
+		<value index="3">sad</value>
+	</attribute>
 </keymap>

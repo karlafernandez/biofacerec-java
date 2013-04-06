@@ -1,30 +1,32 @@
 package com.tomasz.reco.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.opencv.core.Mat;
 
 public class FaceData {
 	
-	private Map<BioAttribute, String> characteristic;
+	private List<BioAttribute> characteristic;
 	private Mat image;
 	
 	public FaceData() {
-		characteristic = new HashMap<BioAttribute, String>();
+		characteristic = new ArrayList<BioAttribute>();
 		image = null;
 	}
 
-	public FaceData(Map<BioAttribute, String> characteristic, Mat image) {
+	public FaceData(List<BioAttribute> characteristic, Mat image) {
 		this.characteristic = characteristic;
 		this.image = image;
 	}
 
-	public Map<BioAttribute, String> getCharacteristic() {
+	public List<BioAttribute> getCharacteristic() {
 		return characteristic;
 	}
 
-	public void setCharacteristic(Map<BioAttribute, String> characteristic) {
+	public void setCharacteristic(List<BioAttribute> characteristic) {
 		this.characteristic = characteristic;
 	}
 
@@ -34,14 +36,6 @@ public class FaceData {
 
 	public void setImage(Mat image) {
 		this.image = image;
-	}
-	
-	
-
-	@Override
-	public String toString() {
-		return "FaceData [characteristic=" + characteristic + ", image="
-				+ image + "]";
 	}
 
 	@Override
@@ -75,4 +69,11 @@ public class FaceData {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "FaceData [characteristic=" + characteristic + ", image="
+				+ image + "]";
+	}
+
 }
