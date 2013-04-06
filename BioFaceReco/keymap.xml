@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<keymap>
+	<attribute value="sex">
+		<value index="1">male</value>
+		<value index="2">female</value>
+	</attribute>
+</keymap>
